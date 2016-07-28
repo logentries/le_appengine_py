@@ -69,12 +69,9 @@ It is available at
 
 In your app.yaml, add the following section under handlers:
 
-	- url: /logentriesworker
-  	  script: logentries.py
-
-Add the follwoing to your WSGIApplication url mapping:
-
-	('/logentriesworker', logentries.LogentriesWorker)
+  - url: /logentriesworker
+    script: logentries.application
+    login: admin
 
 If you don't already have an appengine_config.py file in your app, simplys create a new file by that name.
 
